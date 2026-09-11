@@ -1,17 +1,7 @@
-from flask import Flask
+def add(a, b):
+    """Return the sum of two numbers."""
+    return a + b
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def home():
-    return "CI/CD Pipeline Application is Running"
-
-
-@app.route("/health")
-def health():
-    return "Application is Healthy"
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000)
+def greet(name: str) -> str:
+    """Return a greeting message."""
+    return f"Hello, {name}!"
